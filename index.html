@@ -95,14 +95,7 @@
     .swiper {
       width: 100%;
       padding-bottom: 2rem;
-    }
-    .project-block {
-      margin-bottom: 4rem;
-    }
-    .project-block h3 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #000;
+      margin-bottom: 2rem;
     }
     .swiper-pagination-bullet {
       background: #000;
@@ -190,7 +183,54 @@
 <section id="projects">
   <h2>Portfolio</h2>
 
-  <!-- Add your portfolio projects like Wedding, Restaurant, Photography here as before -->
+  <h3>Wedding A</h3>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/weddinga/1.png" alt="Wedding A 1"></div>
+      <div class="swiper-slide"><img src="images/weddinga/2.png" alt="Wedding A 2"></div>
+      <div class="swiper-slide"><img src="images/weddinga/3.png" alt="Wedding A 3"></div>
+      <div class="swiper-slide"><img src="images/weddinga/4.png" alt="Wedding A 4"></div>
+      <div class="swiper-slide"><img src="images/weddinga/5.png" alt="Wedding A 5"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <h3>Wedding B</h3>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/weddingb/1.png" alt="Wedding B 1"></div>
+      <div class="swiper-slide"><img src="images/weddingb/2.png" alt="Wedding B 2"></div>
+      <div class="swiper-slide"><img src="images/weddingb/3.png" alt="Wedding B 3"></div>
+      <div class="swiper-slide"><img src="images/weddingb/4.png" alt="Wedding B 4"></div>
+      <div class="swiper-slide"><img src="images/weddingb/5.png" alt="Wedding B 5"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <h3>Restaurant</h3>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/restaurant/1.png" alt="Restaurant 1"></div>
+      <div class="swiper-slide"><img src="images/restaurant/2.png" alt="Restaurant 2"></div>
+      <div class="swiper-slide"><img src="images/restaurant/3.png" alt="Restaurant 3"></div>
+      <div class="swiper-slide"><img src="images/restaurant/4.png" alt="Restaurant 4"></div>
+      <div class="swiper-slide"><img src="images/restaurant/5.png" alt="Restaurant 5"></div>
+      <div class="swiper-slide"><img src="images/restaurant/6.png" alt="Restaurant 6"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <h3>Photography</h3>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/photography/1.png" alt="Photography 1"></div>
+      <div class="swiper-slide"><img src="images/photography/2.png" alt="Photography 2"></div>
+      <div class="swiper-slide"><img src="images/photography/3.png" alt="Photography 3"></div>
+      <div class="swiper-slide"><img src="images/photography/4.png" alt="Photography 4"></div>
+      <div class="swiper-slide"><img src="images/photography/5.png" alt="Photography 5"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
   <p class="disclaimer">⚠️ These sample projects are for display purposes only. Your website will be designed to match your unique brand and style.</p>
 </section>
@@ -218,14 +258,27 @@
   &copy; 2025 Webcraft by Vee. All rights reserved.
 </footer>
 
-<!-- Swiper JS (if you're using a slider for portfolio) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
-  // Swiper setup if needed
+  const swipers = document.querySelectorAll('.swiper');
+  swipers.forEach(swiperContainer => {
+    new Swiper(swiperContainer, {
+      loop: true,
+      autoplay: {
+        delay: 3000, // Slide changes every 3 seconds
+        disableOnInteraction: false, // Keep autoplay even after user swipes
+      },
+      pagination: {
+        el: swiperContainer.querySelector('.swiper-pagination'),
+      },
+    });
+  });
 </script>
 
 </body>
 </html>
+
+
 
 
 
